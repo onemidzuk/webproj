@@ -10,32 +10,30 @@ urls = (
 db = web.database(dbn='postgres', user='exec', pw='webproj', db='webproj')
 
 
+openers = []
+def start():
+    global openers
+    acts = db.select('todo')
+    openers = [i['title'] for i in acts]
+
 
 class index:
 
-    r_old = -1
+    start()
+
     def GET(self):
-
-        # return render.index(i.name)
-        todos = db.select('todo')
-
-        while True :
-            r = random.randint(0, len(todos))
-            if r != index.r_old:
-                index.r_old = r
-                break
-        # return render.index(todos)
-        a = (todos[r]['title'])
+        a = openers[random.randint(0, len(openers) - 1)]
         return render.index(a)
 
-    def randomize(self):
-        r = random.randint(0, len(todos))
-        return r
-
 class add:
+
+    def GET(self):
+        return render.add()
+
     def POST(self):
         i = web.input()
         n = db.insert('todo', title=i.title)
+        start()
         raise web.seeother('/')
         #return index.GET(self)
 
