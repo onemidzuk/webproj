@@ -21,8 +21,8 @@ class index:
 
         while True :
             r = random.randint(0, len(todos))
-            if r != r_old.index:
-                r_old = r
+            if r != index.r_old:
+                index.r_old = r
                 break
         # return render.index(todos)
         a = (todos[r]['title'])
