@@ -1,9 +1,30 @@
-$def with (todos)
-<ul>
-$for todo in todos:
-  <li id="t$todo.id">$todo.title</li>
-</ul>
+$def with (a)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
 
-<form method="post" action="add">
-    <p><input type="text" name="title" /><input type="submit" value="Add" /></p>
-</form>
+<body>
+
+	<div class="header">
+
+		<h1>$a</h1>
+	</div>
+	
+
+
+	<div class="but">
+		<form action="/add/">
+			<button>добавить</button>
+		</form>
+	</div>
+
+
+
+
+
+</body>
+</html>
