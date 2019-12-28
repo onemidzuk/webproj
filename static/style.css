@@ -9,37 +9,58 @@
   }
 }
 
+
 body {
-  margin: 0;
-  padding: 0;
+	background-image: url("20092.jpg");
+	background-size: cover;
 }
 
 h1 {
-  position: relative;
-  font-family: "Montserrat", sans-serif;
-  font-size: 8em;
-  font-weight: 700;
+	display: flex;
+	justify-content: center;
+	margin: 10%;
+	font-family: "Montserrat", sans-serif;
+	font-size: 5em;
+	font-weight: 500;
+	color: #fff;
 }
 
 .header {
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 8px 50px;
-  background-color: #02f;
-  background-image: url("/static/20091.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
 
-.header__title {
-  transform: translateX(0);
-  animation-name: header_anim;
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  text-transform: uppercase;
-  color: #fff;
-  align-self: center;
+
+  	align-content: space-around;
+  	transform: translateX(0);
+  	animation-name: header_anim;
+  	animation-duration: 1s;
+  	animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
 }
+
+.but {
+	display: flex;
+	justify-content: center;
+	
+}
+
+button {
+
+    border-radius: 4px;
+    font-size: 25px;
+    transition: border-radius 0.5s ease-in;
+	color: #fff;
+	background: red;
+	border: none;
+	box-shadow: 0 4px 8px 0 rgba(39, 153, 214, 0.35);
+	cursor: pointer;
+}
+
+button:hover {
+    border-radius: 16px;
+    background: orange;
+}
+
+
+
+
+
+
